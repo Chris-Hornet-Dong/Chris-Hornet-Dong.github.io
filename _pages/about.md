@@ -12,6 +12,8 @@ I am a third year undergraduate student at The Hong Kong University of Science a
 
 My research interests lie primarily in Computer Vision, with a particular interest in 3D generation and reconstruction. I am fortunate to conduct research under the supervision of [Prof. Chi-Keung Tang](https://home.cse.ust.hk/~cktang/bio.html) at HKUST and [Prof. Georgios Pavlakos](https://geopavlakos.github.io/) at UT Austin.
 
+Check out my [CV](/assets/CV.pdf) here.
+
 
 Education
 ======
