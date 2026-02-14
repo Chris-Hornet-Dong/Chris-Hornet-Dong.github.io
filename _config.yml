@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Yunao Dong"
 title_separator          : "-"
 name                     : &name "Yunao Dong"
-description              : &description "Yunao Dong's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Yunao Dong - Computer Vision Researcher | HKUST & UT Austin | 3D Generation & Reconstruction"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://chris-hornet-dong.github.io/ # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -130,7 +130,7 @@ atom_feed:
 
 
 # SEO Related
-google_site_verification :
+google_site_verification : "7qxFFrRZcgDhh80Nuos32BBXwEfarzTAC7iCI_LQozQ"
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
