@@ -23,12 +23,12 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpg"
+  avatar           : "profile.png"
   name             : "Yunao Dong"
   pronouns         : # example: "she/her"  
   bio              : #
   location         : "Hong Kong"
-  employer         : "Hong Kong University of Science and Technology"
+  employer         : "HKUST"
   uri              : # URL
   email            : "ydongbd@connect.ust.hk" 
 
