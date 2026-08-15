@@ -16,7 +16,7 @@ I am a photography and birding enthusiast. Here are some selected photographs I 
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  margin-bottom: 34px;
+  margin-bottom: 8px;
 }
 
 .photo-row figure {
@@ -79,7 +79,7 @@ I am a photography and birding enthusiast. Here are some selected photographs I 
 @media (max-width: 600px) {
   .photo-row {
     gap: 4px;
-    margin-bottom: 30px;
+    margin-bottom: 4px;
   }
 
   .photo-row figcaption {
@@ -89,12 +89,6 @@ I am a photography and birding enthusiast. Here are some selected photographs I 
   }
 }
 
-@media (hover: none) {
-  .photo-row figcaption {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 </style>
 
 <div class="photo-row">
