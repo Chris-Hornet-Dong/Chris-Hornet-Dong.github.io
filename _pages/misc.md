@@ -15,8 +15,8 @@ I am a photography and birding enthusiast. Here are some selected photographs I 
 .photo-row {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
-  margin-bottom: 8px;
+  gap: 6px;
+  margin-bottom: 4px;
 }
 
 .photo-row figure {
@@ -31,14 +31,13 @@ I am a photography and birding enthusiast. Here are some selected photographs I 
 .photo-row a {
   display: block;
   width: 100%;
-  aspect-ratio: var(--ratio);
+  line-height: 0;
 }
 
 .photo-row img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
   transform-origin: center bottom;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -78,8 +77,8 @@ I am a photography and birding enthusiast. Here are some selected photographs I 
 
 @media (max-width: 600px) {
   .photo-row {
-    gap: 4px;
-    margin-bottom: 4px;
+    gap: 3px;
+    margin-bottom: 3px;
   }
 
   .photo-row figcaption {
