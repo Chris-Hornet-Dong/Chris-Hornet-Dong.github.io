@@ -7,10 +7,10 @@ redirect_from:
   - /about.html
 ---
 
-I am a third year undergraduate student at The Hong Kong University of Science and Technology (HKUST), majoring in Data Science and Technology (DSCT), additional major in Computer Science (COSC). I also spent time as an exchange student at University of Texas at Austin, majoring in Computer Science.
+I am a third year undergraduate student at The Hong Kong University of Science and Technology (HKUST), majoring in Computer Science (COMP). I also spent time as an exchange student at University of Texas at Austin, majoring in Computer Science.
 
 
-My research interests lie primarily in Computer Vision, with a particular interest in 3D generation and reconstruction. I am fortunate to conduct research under the supervision of [Prof. Chi-Keung Tang](https://home.cse.ust.hk/~cktang/bio.html) at HKUST and [Prof. Georgios Pavlakos](https://geopavlakos.github.io/) at UT Austin.
+My research interests lie primarily in Computer Vision, with a particular interest in learning and reconstructing realistic human and object motion from accessible priors like in the wild videos. I am fortunate to conduct research under the supervision of [Prof. Chi-Keung Tang](https://home.cse.ust.hk/~cktang/bio.html) at HKUST and [Prof. Georgios Pavlakos](https://geopavlakos.github.io/) at UT Austin.
 
 
 
