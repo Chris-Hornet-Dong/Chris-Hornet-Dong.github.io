@@ -38,6 +38,7 @@ I am a photography and birding enthusiast. Here are some selected photographs I 
   display: block;
   width: 100%;
   height: auto;
+  margin: 0;
   transform-origin: center bottom;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
