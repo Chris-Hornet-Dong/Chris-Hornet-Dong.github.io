@@ -16,7 +16,7 @@ I am a photography and birding enthusiast. Here are some selected photographs I 
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 34px;
 }
 
 .photo-row figure {
@@ -24,41 +24,50 @@ I am a photography and birding enthusiast. Here are some selected photographs I 
   flex: var(--ratio) 1 0;
   min-width: 0;
   margin: 0;
-  overflow: hidden;
-  aspect-ratio: var(--ratio);
-  background: var(--global-bg-color);
+  overflow: visible;
+  z-index: 0;
 }
 
-.photo-row a,
+.photo-row a {
+  display: block;
+  width: 100%;
+  aspect-ratio: var(--ratio);
+}
+
 .photo-row img {
   display: block;
   width: 100%;
   height: 100%;
-}
-
-.photo-row img {
   object-fit: contain;
-  transition: transform 0.3s ease;
+  transform-origin: center bottom;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .photo-row figcaption {
   position: absolute;
+  top: calc(100% + 7px);
   right: 0;
-  bottom: 0;
   left: 0;
-  padding: 10px 12px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.72);
+  padding: 0 6px;
+  color: var(--global-text-color);
   font-size: 0.85em;
+  line-height: 1.3;
+  text-align: center;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(8px);
+  transform: translateY(-4px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.photo-row figure:hover,
+.photo-row figure:focus-within {
+  z-index: 10;
 }
 
 .photo-row figure:hover img,
 .photo-row figure:focus-within img {
-  transform: scale(1.035);
+  transform: scale(1.06);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
 }
 
 .photo-row figure:hover figcaption,
@@ -70,11 +79,12 @@ I am a photography and birding enthusiast. Here are some selected photographs I 
 @media (max-width: 600px) {
   .photo-row {
     gap: 4px;
-    margin-bottom: 4px;
+    margin-bottom: 30px;
   }
 
   .photo-row figcaption {
-    padding: 7px 8px;
+    top: calc(100% + 5px);
+    padding: 0 3px;
     font-size: 0.72em;
   }
 }
@@ -167,3 +177,5 @@ I am a photography and birding enthusiast. Here are some selected photographs I 
   <figure style="--ratio: 1.778"><a href="{{ '/images/25.11 California 3.jpg' | relative_url }}"><img src="{{ '/images/25.11 California 3.jpg' | relative_url }}" alt="California, November 2025, photo 3" loading="lazy" decoding="async"></a><figcaption>November 2025 &middot; California</figcaption></figure>
   <figure style="--ratio: 1.778"><a href="{{ '/images/25.11 California 4.jpg' | relative_url }}"><img src="{{ '/images/25.11 California 4.jpg' | relative_url }}" alt="California, November 2025, photo 4" loading="lazy" decoding="async"></a><figcaption>November 2025 &middot; California</figcaption></figure>
 </div>
+
+Some Primary Places on my travel list: [Isle of Skye, Scotland](https://en.wikipedia.org/wiki/Isle_of_Skye),[Salar de Uyuni, Bolivia](https://en.wikipedia.org/wiki/Salar_de_Uyuni), [The Witches' Market, Bolivia](https://en.wikipedia.org/wiki/The_Witches%27_Market), [Machu Picchu, Peru](https://en.wikipedia.org/wiki/Machu_Picchu), [Socotra,Yemen](https://en.wikipedia.org/wiki/Socotra), [Patagonia, Argentina](https://en.wikipedia.org/wiki/Patagonia), [Glacier National Park, U.S.](https://en.wikipedia.org/wiki/Glacier_National_Park_(U.S.)), [Mount Kinabalu, Malaysia](https://en.wikipedia.org/wiki/Mount_Kinabalu)
