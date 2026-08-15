@@ -13,37 +13,20 @@ I am a photography and birding enthusiast. Here are some selected photographs I 
 
 <style>
 .photo-row {
-  display: grid;
-  gap: 16px;
-  margin: 0 0 16px;
-}
-
-.photo-row--portraits {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.photo-row--wide {
-  grid-template-columns: minmax(0, 1fr);
-}
-
-.photo-row--mixed {
-  grid-template-columns: minmax(0, 3fr) minmax(0, 7.111fr);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .photo-row figure {
+  position: relative;
+  flex: var(--ratio) 1 0;
+  min-width: 0;
   margin: 0;
   overflow: hidden;
-  border-radius: 4px;
-}
-
-.photo-row--portraits figure,
-.photo-row--mixed figure:first-child {
-  aspect-ratio: 3 / 4;
-}
-
-.photo-row--wide figure,
-.photo-row--mixed figure:last-child {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: var(--ratio);
+  background: var(--global-bg-color);
 }
 
 .photo-row a,
@@ -54,116 +37,133 @@ I am a photography and birding enthusiast. Here are some selected photographs I 
 }
 
 .photo-row img {
-  object-fit: cover;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.photo-row figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px 12px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.72);
+  font-size: 0.85em;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.photo-row figure:hover img,
+.photo-row figure:focus-within img {
+  transform: scale(1.035);
+}
+
+.photo-row figure:hover figcaption,
+.photo-row figure:focus-within figcaption {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 600px) {
-  .photo-row--portraits,
-  .photo-row--mixed {
-    grid-template-columns: minmax(0, 1fr);
+  .photo-row {
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+
+  .photo-row figcaption {
+    padding: 7px 8px;
+    font-size: 0.72em;
+  }
+}
+
+@media (hover: none) {
+  .photo-row figcaption {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>
 
-Guangdong (Guangzhou, Foshan and Qingyuan)
-------
-
-<div class="photo-row photo-row--wide">
-  <figure><a href="{{ '/images/26.5 Guangdong 1.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 1.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 1" loading="lazy" decoding="async"></a></figure>
-</div>
-<div class="photo-row photo-row--portraits">
-  <figure><a href="{{ '/images/26.5 Guangdong 5.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 5.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 5" loading="lazy" decoding="async"></a></figure>
-  <figure><a href="{{ '/images/26.5 Guangdong 6.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 6.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 6" loading="lazy" decoding="async"></a></figure>
-</div>
-<div class="photo-row photo-row--wide">
-  <figure><a href="{{ '/images/26.5 Guangdong 2.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 2.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 2" loading="lazy" decoding="async"></a></figure>
-</div>
-<div class="photo-row photo-row--portraits">
-  <figure><a href="{{ '/images/26.5 Guangdong 7.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 7.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 7" loading="lazy" decoding="async"></a></figure>
-  <figure><a href="{{ '/images/26.5 Guangdong 8.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 8.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 8" loading="lazy" decoding="async"></a></figure>
-</div>
-<div class="photo-row photo-row--mixed">
-  <figure><a href="{{ '/images/26.5 Guangdong 9.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 9.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 9" loading="lazy" decoding="async"></a></figure>
-  <figure><a href="{{ '/images/26.5 Guangdong 3.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 3.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 3" loading="lazy" decoding="async"></a></figure>
-</div>
-<div class="photo-row photo-row--wide">
-  <figure><a href="{{ '/images/26.5 Guangdong 4.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 4.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 4" loading="lazy" decoding="async"></a></figure>
+<div class="photo-row">
+  <figure style="--ratio: 1.778"><a href="{{ '/images/26.5 Guangdong 1.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 1.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 1" loading="lazy" decoding="async"></a><figcaption>May 2026 &middot; Guangdong</figcaption></figure>
+  <figure style="--ratio: 0.75"><a href="{{ '/images/26.5 Guangdong 5.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 5.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 5" loading="lazy" decoding="async"></a><figcaption>May 2026 &middot; Guangdong</figcaption></figure>
 </div>
 
-Hong Kong
-------
-
-<div class="photo-row photo-row--wide">
-  <figure><a href="{{ '/images/25.5 Hong Kong.jpg' | relative_url }}"><img src="{{ '/images/25.5 Hong Kong.jpg' | relative_url }}" alt="Hong Kong, May 2025" loading="lazy" decoding="async"></a></figure>
-</div>
-<div class="photo-row photo-row--portraits">
-  <figure><a href="{{ '/images/25.3 Hong Kong.jpg' | relative_url }}"><img src="{{ '/images/25.3 Hong Kong.jpg' | relative_url }}" alt="Hong Kong, March 2025" loading="lazy" decoding="async"></a></figure>
-  <figure><a href="{{ '/images/25.8 Hong Kong 3.jpg' | relative_url }}"><img src="{{ '/images/25.8 Hong Kong 3.jpg' | relative_url }}" alt="Hong Kong, August 2025, photo 3" loading="lazy" decoding="async"></a></figure>
-</div>
-<div class="photo-row photo-row--wide">
-  <figure><a href="{{ '/images/25.8 Hong Kong 1.jpg' | relative_url }}"><img src="{{ '/images/25.8 Hong Kong 1.jpg' | relative_url }}" alt="Hong Kong, August 2025, photo 1" loading="lazy" decoding="async"></a></figure>
-</div>
-<div class="photo-row photo-row--wide">
-  <figure><a href="{{ '/images/25.8 Hong Kong 2.jpg' | relative_url }}"><img src="{{ '/images/25.8 Hong Kong 2.jpg' | relative_url }}" alt="Hong Kong, August 2025, photo 2" loading="lazy" decoding="async"></a></figure>
+<div class="photo-row">
+  <figure style="--ratio: 0.75"><a href="{{ '/images/26.5 Guangdong 6.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 6.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 6" loading="lazy" decoding="async"></a><figcaption>May 2026 &middot; Guangdong</figcaption></figure>
+  <figure style="--ratio: 1.778"><a href="{{ '/images/26.5 Guangdong 2.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 2.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 2" loading="lazy" decoding="async"></a><figcaption>May 2026 &middot; Guangdong</figcaption></figure>
 </div>
 
-Colorado (Rocky Mountain National Park)
-------
-
-<div class="photo-row photo-row--mixed">
-  <figure><a href="{{ '/images/25.9 Colorado 1.jpg' | relative_url }}"><img src="{{ '/images/25.9 Colorado 1.jpg' | relative_url }}" alt="Colorado, September 2025, photo 1" loading="lazy" decoding="async"></a></figure>
-  <figure><a href="{{ '/images/25.9 Colorado 2.jpg' | relative_url }}"><img src="{{ '/images/25.9 Colorado 2.jpg' | relative_url }}" alt="Colorado, September 2025, photo 2" loading="lazy" decoding="async"></a></figure>
+<div class="photo-row">
+  <figure style="--ratio: 1.778"><a href="{{ '/images/26.5 Guangdong 3.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 3.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 3" loading="lazy" decoding="async"></a><figcaption>May 2026 &middot; Guangdong</figcaption></figure>
+  <figure style="--ratio: 0.75"><a href="{{ '/images/26.5 Guangdong 7.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 7.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 7" loading="lazy" decoding="async"></a><figcaption>May 2026 &middot; Guangdong</figcaption></figure>
 </div>
 
-California (Death Valley National Park, Sequoia National Park, and Santa Monica Beach)
-------
-
-<div class="photo-row photo-row--wide">
-  <figure><a href="{{ '/images/25.10 California.jpg' | relative_url }}"><img src="{{ '/images/25.10 California.jpg' | relative_url }}" alt="California, October 2025" loading="lazy" decoding="async"></a></figure>
-</div>
-<div class="photo-row photo-row--portraits">
-  <figure><a href="{{ '/images/25.11 California 1.jpg' | relative_url }}"><img src="{{ '/images/25.11 California 1.jpg' | relative_url }}" alt="California, November 2025, photo 1" loading="lazy" decoding="async"></a></figure>
-  <figure><a href="{{ '/images/25.11 California 5.jpg' | relative_url }}"><img src="{{ '/images/25.11 California 5.jpg' | relative_url }}" alt="California, November 2025, photo 5" loading="lazy" decoding="async"></a></figure>
-</div>
-<div class="photo-row photo-row--wide">
-  <figure><a href="{{ '/images/25.11 California 2.jpg' | relative_url }}"><img src="{{ '/images/25.11 California 2.jpg' | relative_url }}" alt="California, November 2025, photo 2" loading="lazy" decoding="async"></a></figure>
-</div>
-<div class="photo-row photo-row--wide">
-  <figure><a href="{{ '/images/25.11 California 3.jpg' | relative_url }}"><img src="{{ '/images/25.11 California 3.jpg' | relative_url }}" alt="California, November 2025, photo 3" loading="lazy" decoding="async"></a></figure>
-</div>
-<div class="photo-row photo-row--wide">
-  <figure><a href="{{ '/images/25.11 California 4.jpg' | relative_url }}"><img src="{{ '/images/25.11 California 4.jpg' | relative_url }}" alt="California, November 2025, photo 4" loading="lazy" decoding="async"></a></figure>
+<div class="photo-row">
+  <figure style="--ratio: 0.75"><a href="{{ '/images/26.5 Guangdong 8.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 8.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 8" loading="lazy" decoding="async"></a><figcaption>May 2026 &middot; Guangdong</figcaption></figure>
+  <figure style="--ratio: 1.778"><a href="{{ '/images/26.5 Guangdong 4.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 4.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 4" loading="lazy" decoding="async"></a><figcaption>May 2026 &middot; Guangdong</figcaption></figure>
 </div>
 
-Japan (Tokyo and Hakone)
-------
-
-<div class="photo-row photo-row--wide">
-  <figure><a href="{{ '/images/24.10 Japan 1.jpg' | relative_url }}"><img src="{{ '/images/24.10 Japan 1.jpg' | relative_url }}" alt="Japan, October 2024, photo 1" loading="lazy" decoding="async"></a></figure>
-</div>
-<div class="photo-row photo-row--portraits">
-  <figure><a href="{{ '/images/24.10 Japan 2.jpg' | relative_url }}"><img src="{{ '/images/24.10 Japan 2.jpg' | relative_url }}" alt="Japan, October 2024, photo 2" loading="lazy" decoding="async"></a></figure>
-  <figure><a href="{{ '/images/24.10 Japan 5.jpg' | relative_url }}"><img src="{{ '/images/24.10 Japan 5.jpg' | relative_url }}" alt="Japan, October 2024, photo 5" loading="lazy" decoding="async"></a></figure>
-</div>
-<div class="photo-row photo-row--wide">
-  <figure><a href="{{ '/images/24.10 Japan 3.jpg' | relative_url }}"><img src="{{ '/images/24.10 Japan 3.jpg' | relative_url }}" alt="Japan, October 2024, photo 3" loading="lazy" decoding="async"></a></figure>
-</div>
-<div class="photo-row photo-row--mixed">
-  <figure><a href="{{ '/images/24.10 Japan 7.png' | relative_url }}"><img src="{{ '/images/24.10 Japan 7.png' | relative_url }}" alt="Japan, October 2024, photo 7" loading="lazy" decoding="async"></a></figure>
-  <figure><a href="{{ '/images/24.10 Japan 4.jpg' | relative_url }}"><img src="{{ '/images/24.10 Japan 4.jpg' | relative_url }}" alt="Japan, October 2024, photo 4" loading="lazy" decoding="async"></a></figure>
-</div>
-<div class="photo-row photo-row--wide">
-  <figure><a href="{{ '/images/24.10 Japan 6.jpg' | relative_url }}"><img src="{{ '/images/24.10 Japan 6.jpg' | relative_url }}" alt="Japan, October 2024, photo 6" loading="lazy" decoding="async"></a></figure>
+<div class="photo-row">
+  <figure style="--ratio: 1.778"><a href="{{ '/images/25.5 Hong Kong.jpg' | relative_url }}"><img src="{{ '/images/25.5 Hong Kong.jpg' | relative_url }}" alt="Hong Kong, May 2025" loading="lazy" decoding="async"></a><figcaption>May 2025 &middot; Hong Kong</figcaption></figure>
+  <figure style="--ratio: 0.667"><a href="{{ '/images/25.3 Hong Kong.jpg' | relative_url }}"><img src="{{ '/images/25.3 Hong Kong.jpg' | relative_url }}" alt="Hong Kong, March 2025" loading="lazy" decoding="async"></a><figcaption>March 2025 &middot; Hong Kong</figcaption></figure>
 </div>
 
-UK (London, Bath and Liverpool)
-------
-
-<div class="photo-row photo-row--mixed">
-  <figure><a href="{{ '/images/25.1 UK 4.jpg' | relative_url }}"><img src="{{ '/images/25.1 UK 4.jpg' | relative_url }}" alt="UK, January 2025, photo 4" loading="lazy" decoding="async"></a></figure>
-  <figure><a href="{{ '/images/25.1 UK 1.jpg' | relative_url }}"><img src="{{ '/images/25.1 UK 1.jpg' | relative_url }}" alt="UK, January 2025, photo 1" loading="lazy" decoding="async"></a></figure>
+<div class="photo-row">
+  <figure style="--ratio: 0.75"><a href="{{ '/images/25.8 Hong Kong 3.jpg' | relative_url }}"><img src="{{ '/images/25.8 Hong Kong 3.jpg' | relative_url }}" alt="Hong Kong, August 2025, photo 3" loading="lazy" decoding="async"></a><figcaption>August 2025 &middot; Hong Kong</figcaption></figure>
+  <figure style="--ratio: 1.782"><a href="{{ '/images/25.8 Hong Kong 1.jpg' | relative_url }}"><img src="{{ '/images/25.8 Hong Kong 1.jpg' | relative_url }}" alt="Hong Kong, August 2025, photo 1" loading="lazy" decoding="async"></a><figcaption>August 2025 &middot; Hong Kong</figcaption></figure>
 </div>
-<div class="photo-row photo-row--portraits">
-  <figure><a href="{{ '/images/25.1 UK 2.jpg' | relative_url }}"><img src="{{ '/images/25.1 UK 2.jpg' | relative_url }}" alt="UK, January 2025, photo 2" loading="lazy" decoding="async"></a></figure>
-  <figure><a href="{{ '/images/25.1 UK 3.jpg' | relative_url }}"><img src="{{ '/images/25.1 UK 3.jpg' | relative_url }}" alt="UK, January 2025, photo 3" loading="lazy" decoding="async"></a></figure>
+
+<div class="photo-row">
+  <figure style="--ratio: 0.75"><a href="{{ '/images/25.9 Colorado 1.jpg' | relative_url }}"><img src="{{ '/images/25.9 Colorado 1.jpg' | relative_url }}" alt="Colorado, September 2025, photo 1" loading="lazy" decoding="async"></a><figcaption>September 2025 &middot; Colorado</figcaption></figure>
+  <figure style="--ratio: 1.782"><a href="{{ '/images/25.9 Colorado 2.jpg' | relative_url }}"><img src="{{ '/images/25.9 Colorado 2.jpg' | relative_url }}" alt="Colorado, September 2025, photo 2" loading="lazy" decoding="async"></a><figcaption>September 2025 &middot; Colorado</figcaption></figure>
+</div>
+
+<div class="photo-row">
+  <figure style="--ratio: 1.778"><a href="{{ '/images/25.10 California.jpg' | relative_url }}"><img src="{{ '/images/25.10 California.jpg' | relative_url }}" alt="California, October 2025" loading="lazy" decoding="async"></a><figcaption>October 2025 &middot; California</figcaption></figure>
+  <figure style="--ratio: 0.75"><a href="{{ '/images/25.11 California 1.jpg' | relative_url }}"><img src="{{ '/images/25.11 California 1.jpg' | relative_url }}" alt="California, November 2025, photo 1" loading="lazy" decoding="async"></a><figcaption>November 2025 &middot; California</figcaption></figure>
+</div>
+
+<div class="photo-row">
+  <figure style="--ratio: 0.75"><a href="{{ '/images/25.11 California 5.jpg' | relative_url }}"><img src="{{ '/images/25.11 California 5.jpg' | relative_url }}" alt="California, November 2025, photo 5" loading="lazy" decoding="async"></a><figcaption>November 2025 &middot; California</figcaption></figure>
+  <figure style="--ratio: 1.778"><a href="{{ '/images/25.11 California 2.jpg' | relative_url }}"><img src="{{ '/images/25.11 California 2.jpg' | relative_url }}" alt="California, November 2025, photo 2" loading="lazy" decoding="async"></a><figcaption>November 2025 &middot; California</figcaption></figure>
+</div>
+
+<div class="photo-row">
+  <figure style="--ratio: 1.748"><a href="{{ '/images/24.10 Japan 1.jpg' | relative_url }}"><img src="{{ '/images/24.10 Japan 1.jpg' | relative_url }}" alt="Japan, October 2024, photo 1" loading="lazy" decoding="async"></a><figcaption>October 2024 &middot; Japan</figcaption></figure>
+  <figure style="--ratio: 0.667"><a href="{{ '/images/24.10 Japan 2.jpg' | relative_url }}"><img src="{{ '/images/24.10 Japan 2.jpg' | relative_url }}" alt="Japan, October 2024, photo 2" loading="lazy" decoding="async"></a><figcaption>October 2024 &middot; Japan</figcaption></figure>
+</div>
+
+<div class="photo-row">
+  <figure style="--ratio: 0.667"><a href="{{ '/images/24.10 Japan 5.jpg' | relative_url }}"><img src="{{ '/images/24.10 Japan 5.jpg' | relative_url }}" alt="Japan, October 2024, photo 5" loading="lazy" decoding="async"></a><figcaption>October 2024 &middot; Japan</figcaption></figure>
+  <figure style="--ratio: 1.636"><a href="{{ '/images/24.10 Japan 3.jpg' | relative_url }}"><img src="{{ '/images/24.10 Japan 3.jpg' | relative_url }}" alt="Japan, October 2024, photo 3" loading="lazy" decoding="async"></a><figcaption>October 2024 &middot; Japan</figcaption></figure>
+</div>
+
+<div class="photo-row">
+  <figure style="--ratio: 1.777"><a href="{{ '/images/24.10 Japan 4.jpg' | relative_url }}"><img src="{{ '/images/24.10 Japan 4.jpg' | relative_url }}" alt="Japan, October 2024, photo 4" loading="lazy" decoding="async"></a><figcaption>October 2024 &middot; Japan</figcaption></figure>
+  <figure style="--ratio: 0.667"><a href="{{ '/images/24.10 Japan 7.png' | relative_url }}"><img src="{{ '/images/24.10 Japan 7.png' | relative_url }}" alt="Japan, October 2024, photo 7" loading="lazy" decoding="async"></a><figcaption>October 2024 &middot; Japan</figcaption></figure>
+</div>
+
+<div class="photo-row">
+  <figure style="--ratio: 0.667"><a href="{{ '/images/25.1 UK 2.jpg' | relative_url }}"><img src="{{ '/images/25.1 UK 2.jpg' | relative_url }}" alt="UK, January 2025, photo 2" loading="lazy" decoding="async"></a><figcaption>January 2025 &middot; UK</figcaption></figure>
+  <figure style="--ratio: 1.878"><a href="{{ '/images/25.1 UK 1.jpg' | relative_url }}"><img src="{{ '/images/25.1 UK 1.jpg' | relative_url }}" alt="UK, January 2025, photo 1" loading="lazy" decoding="async"></a><figcaption>January 2025 &middot; UK</figcaption></figure>
+</div>
+
+<div class="photo-row">
+  <figure style="--ratio: 1.778"><a href="{{ '/images/25.8 Hong Kong 2.jpg' | relative_url }}"><img src="{{ '/images/25.8 Hong Kong 2.jpg' | relative_url }}" alt="Hong Kong, August 2025, photo 2" loading="lazy" decoding="async"></a><figcaption>August 2025 &middot; Hong Kong</figcaption></figure>
+  <figure style="--ratio: 0.75"><a href="{{ '/images/26.5 Guangdong 9.jpg' | relative_url }}"><img src="{{ '/images/26.5 Guangdong 9.jpg' | relative_url }}" alt="Guangdong, May 2026, photo 9" loading="lazy" decoding="async"></a><figcaption>May 2026 &middot; Guangdong</figcaption></figure>
+</div>
+
+<div class="photo-row">
+  <figure style="--ratio: 1.675"><a href="{{ '/images/24.10 Japan 6.jpg' | relative_url }}"><img src="{{ '/images/24.10 Japan 6.jpg' | relative_url }}" alt="Japan, October 2024, photo 6" loading="lazy" decoding="async"></a><figcaption>October 2024 &middot; Japan</figcaption></figure>
+  <figure style="--ratio: 0.666"><a href="{{ '/images/25.1 UK 3.jpg' | relative_url }}"><img src="{{ '/images/25.1 UK 3.jpg' | relative_url }}" alt="UK, January 2025, photo 3" loading="lazy" decoding="async"></a><figcaption>January 2025 &middot; UK</figcaption></figure>
+  <figure style="--ratio: 0.655"><a href="{{ '/images/25.1 UK 4.jpg' | relative_url }}"><img src="{{ '/images/25.1 UK 4.jpg' | relative_url }}" alt="UK, January 2025, photo 4" loading="lazy" decoding="async"></a><figcaption>January 2025 &middot; UK</figcaption></figure>
+</div>
+
+<div class="photo-row">
+  <figure style="--ratio: 1.778"><a href="{{ '/images/25.11 California 3.jpg' | relative_url }}"><img src="{{ '/images/25.11 California 3.jpg' | relative_url }}" alt="California, November 2025, photo 3" loading="lazy" decoding="async"></a><figcaption>November 2025 &middot; California</figcaption></figure>
+  <figure style="--ratio: 1.778"><a href="{{ '/images/25.11 California 4.jpg' | relative_url }}"><img src="{{ '/images/25.11 California 4.jpg' | relative_url }}" alt="California, November 2025, photo 4" loading="lazy" decoding="async"></a><figcaption>November 2025 &middot; California</figcaption></figure>
 </div>
