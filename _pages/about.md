@@ -58,7 +58,7 @@ Research Experience
 Publiations
 ======
 <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 20px;">
-  <img src="/images/Real2Sim%20in%20HOI.png" width="120" style="border-radius: 4px; flex-shrink: 0;">
+  <img src="/images/Real2Sim%20in%20HOI.png" width="60" style="border-radius: 4px; flex-shrink: 0;">
   <div>
     <strong style="font-size: 1.1em;"><a href="https://arxiv.org/abs/2605.14462">Real2Sim in HOI: Toward Physically Plausible HOI Reconstruction from Monocular Videos</a></strong>
     <span> Yubo Zhao, Yujin Chai, <strong>Yunao Dong</strong>, Chengfeng Zhao, Zijiao Zeng, Yuan Liu, Chi-Keung Tang</span><br>
