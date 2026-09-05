@@ -42,7 +42,7 @@ Research Experience
   <div>
     <strong style="font-size: 1.1em;">Hong Kong University of Science and Technology (HKUST)</strong><br>
     <span>Supervised by Professor Chi Keung "CK" Tang | Jan. 2026 - May. 2026</span><br>
-    <small>Built a training free physically plausible Human Object Interaction reconstruction pipeline </small>
+    <small> </small>
   </div>
 </div>
 
@@ -51,7 +51,7 @@ Research Experience
   <div>
     <strong style="font-size: 1.1em;">University of Texas at Austin (UT Austin)</strong><br>
     <span> Supervised by Professor Georgios Pavlakos | Nov. 2025 - Now</span><br>
-    <small>Still Ongoing...</small>
+    <small></small>
   </div>
 </div>
 
