@@ -54,3 +54,14 @@ Research Experience
     <small>Still Ongoing...</small>
   </div>
 </div>
+
+Publiations
+======
+<div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 20px;">
+  <img src="/images/Real2Sim%20in%20HOI.png" width="60" style="border-radius: 4px; flex-shrink: 0;">
+  <div>
+    <strong style="font-size: 1.1em;">Real2Sim in HOI: Toward Physically Plausible HOI Reconstruction from Monocular Videos</strong><br>
+    <span> Yubo Zhao, Yujin Chai, Yunao Dong, Chengfeng Zhao, Zijiao Zeng, Yuan Liu, Chi-Keung Tang</span><br>
+    <small>In submission to NeurlPS 2026</small>
+  </div>
+</div>
