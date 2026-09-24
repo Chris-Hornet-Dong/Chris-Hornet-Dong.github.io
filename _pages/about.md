@@ -62,6 +62,9 @@ Publiations
   <div>
     <strong style="font-size: 1.1em;"><a href="https://arxiv.org/abs/2605.14462">Real2Sim in HOI: Toward Physically Plausible HOI Reconstruction from Monocular Videos</a></strong><br>
     <span> Yubo Zhao, Yujin Chai, <strong>Yunao Dong</strong>, Chengfeng Zhao, Zijiao Zeng, Yuan Liu, Chi-Keung Tang</span><br>
-    <small>In submission to NeurlPS 2026</small>
+    <small>NeurIPS 2026</small>
   </div>
 </div>
+
+Awards
+======
