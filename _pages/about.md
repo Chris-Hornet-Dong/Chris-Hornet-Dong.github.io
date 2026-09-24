@@ -68,3 +68,20 @@ Publiations
 
 Awards
 ======
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 12px;">
+  <span>Li Po Chun Charitable Trust Fund Scholarship</span>
+  <small style="flex-shrink: 0; white-space: nowrap;">2025–2026</small>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 12px;">
+  <span>HKSAR Government Scholarship Fund – Reaching Out Award</span>
+  <small style="flex-shrink: 0; white-space: nowrap;">2025</small>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 12px;">
+  <span>University’s Scholarship Scheme for Continuing Undergraduate Students (Top 3%)</span>
+  <small style="flex-shrink: 0; white-space: nowrap;">2023–2026</small>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 12px;">
+  <span>Dean’s List Honor (every semester, GPA &gt; 3.7)</span>
+  <small style="flex-shrink: 0; white-space: nowrap;">2023–2026</small>
+</div>
+
