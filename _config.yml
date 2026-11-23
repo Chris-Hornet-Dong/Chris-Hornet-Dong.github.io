@@ -406,6 +406,7 @@ filtered_bibtex_keywords:
     pmid,
     poster,
     preview,
+    preview_videos,
     selected,
     slides,
     supp,

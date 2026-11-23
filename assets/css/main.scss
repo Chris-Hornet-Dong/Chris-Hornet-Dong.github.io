@@ -51,6 +51,16 @@
   }
 }
 
+/* Video thumbnails (preview_videos in papers.bib) fill the column like images
+   and reserve their space before the first clip loads. */
+.publications video.preview-playlist {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1760 / 1080;
+  object-fit: cover;
+}
+
 /* Colour palette taken from the BioMo project page:
    background #121212, text #e8e8e8, links #209cee, orange #e2885a,
    light blue #a0c3e1, rules #444444. Dark mode uses it as is; light mode
