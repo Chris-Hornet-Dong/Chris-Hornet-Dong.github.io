@@ -37,15 +37,16 @@
    when upgrading the gem, re-copy its main.scss and keep this block at the end).
    --------------------------------------------------------------------------- */
 
-/* Larger publication thumbnails: widen the thumbnail column from 2/12 to 30%
-   on screens wide enough for side-by-side columns. Phones keep the default. */
+/* Larger publication thumbnails: widen the thumbnail column from 2/12 to 35%
+   (about 360px at the 1140px max_width) on screens wide enough for
+   side-by-side columns. Phones keep the default. */
 @media (min-width: 576px) {
   .publications .row > .col-sm-2.abbr {
-    flex: 0 0 30%;
-    max-width: 30%;
+    flex: 0 0 35%;
+    max-width: 35%;
   }
   .publications .row > .col-sm-8 {
-    flex: 0 0 70%;
-    max-width: 70%;
+    flex: 0 0 65%;
+    max-width: 65%;
   }
 }
