@@ -1,9 +1,7 @@
-# Co-authors listed here are linked from the publication list.
-# Keys are lowercase last names; firstname lists every spelling used in papers.bib.
-"pavlakos":
-  - firstname: ["Georgios", "G."]
-    url: https://geopavlakos.github.io/
-
-"tang":
-  - firstname: ["Chi-Keung", "C.-K.", "C. K."]
-    url: https://home.cse.ust.hk/~cktang/bio.html
+# Co-authors listed here would be linked from the publication list.
+# Intentionally empty: author names are shown without links.
+# Format, if ever needed (keys are lowercase last names):
+# "pavlakos":
+#   - firstname: ["Georgios", "G."]
+#     url: https://geopavlakos.github.io/
+{}
