@@ -1,13 +1,13 @@
 ---
-title: ""
+layout: page
+title: misc.
 permalink: /misc/
-author_profile: true
+description:
+nav: true
+nav_order: 2
 ---
 
-
-
-Travel & Photography
-======
+## Travel & Photography
 
 I am a photography and birding enthusiast. Here are some selected photographs I took along the trips.
 
@@ -176,11 +176,4 @@ I am a photography and birding enthusiast. Here are some selected photographs I 
   <figure style="--ratio: 1.778"><a href="{{ '/images/25.11 California 4.jpg' | relative_url }}"><img src="{{ '/images/25.11 California 4.jpg' | relative_url }}" alt="California, November 2025, photo 4" loading="lazy" decoding="async"></a><figcaption>November 2025 &middot; California</figcaption></figure>
 </div>
 
-
-
-
-
-
-
-
-Some Primary Places on my travel list: [Isle of Skye, Scotland](https://en.wikipedia.org/wiki/Isle_of_Skye); [Salar de Uyuni, Bolivia](https://en.wikipedia.org/wiki/Salar_de_Uyuni); [The Witches' Market, Bolivia](https://en.wikipedia.org/wiki/The_Witches%27_Market); [Machu Picchu, Peru](https://en.wikipedia.org/wiki/Machu_Picchu); [Socotra,Yemen](https://en.wikipedia.org/wiki/Socotra); [Patagonia, Argentina](https://en.wikipedia.org/wiki/Patagonia); [Glacier National Park, Alaska, U.S.](https://en.wikipedia.org/wiki/Glacier_National_Park_(U.S.)); [Mount Kinabalu, Malaysia](https://en.wikipedia.org/wiki/Mount_Kinabalu); Yubeng and Nanjiluo, Yunnan, China; [Mêdog, Tibet, China](https://en.wikipedia.org/wiki/M%C3%AAdog_Town)
+Some Primary Places on my travel list: [Isle of Skye, Scotland](https://en.wikipedia.org/wiki/Isle_of_Skye); [Salar de Uyuni, Bolivia](https://en.wikipedia.org/wiki/Salar_de_Uyuni); [The Witches' Market, Bolivia](https://en.wikipedia.org/wiki/The_Witches%27_Market); [Machu Picchu, Peru](https://en.wikipedia.org/wiki/Machu_Picchu); [Socotra,Yemen](https://en.wikipedia.org/wiki/Socotra); [Patagonia, Argentina](https://en.wikipedia.org/wiki/Patagonia); [Glacier National Park, Alaska, U.S.](<https://en.wikipedia.org/wiki/Glacier_National_Park_(U.S.)>); [Mount Kinabalu, Malaysia](https://en.wikipedia.org/wiki/Mount_Kinabalu); Yubeng and Nanjiluo, Yunnan, China; [Mêdog, Tibet, China](https://en.wikipedia.org/wiki/M%C3%AAdog_Town)

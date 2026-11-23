@@ -1,0 +1,5 @@
+# Google Scholar citation counts, keyed by "<scholar_userid>:<paper id>".
+# Refreshed by bin/update_scholar_citations.py; empty until that script is run.
+metadata:
+  last_updated:
+papers: {}

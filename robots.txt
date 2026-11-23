@@ -1,6 +1,9 @@
+---
+permalink: /robots.txt
+---
 User-agent: *
 # BioMo project page: keep its PDF and videos out of search results (the page itself has a noindex tag).
 Disallow: /BioMo/static/
 Allow: /
 
-Sitemap: https://chris-hornet-dong.github.io/sitemap.xml
+Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
