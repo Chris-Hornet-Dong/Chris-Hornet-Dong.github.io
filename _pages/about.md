@@ -30,7 +30,7 @@ latest_posts:
     margin-bottom: 20px;
   }
   .cv-entry img {
-    width: 60px;
+    width: 100px;
     flex-shrink: 0;
     border-radius: 4px;
   }
