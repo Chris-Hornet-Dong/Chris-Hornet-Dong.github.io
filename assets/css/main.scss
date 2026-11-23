@@ -37,16 +37,60 @@
    when upgrading the gem, re-copy its main.scss and keep this block at the end).
    --------------------------------------------------------------------------- */
 
-/* Larger publication thumbnails: widen the thumbnail column from 2/12 to 35%
-   (about 360px at the 1140px max_width) on screens wide enough for
+/* Larger publication thumbnails: widen the thumbnail column from 2/12 to 25%
+   (about 255px at the 1140px max_width) on screens wide enough for
    side-by-side columns. Phones keep the default. */
 @media (min-width: 576px) {
   .publications .row > .col-sm-2.abbr {
-    flex: 0 0 35%;
-    max-width: 35%;
+    flex: 0 0 25%;
+    max-width: 25%;
   }
   .publications .row > .col-sm-8 {
-    flex: 0 0 65%;
-    max-width: 65%;
+    flex: 0 0 75%;
+    max-width: 75%;
   }
+}
+
+/* Colour palette taken from the BioMo project page:
+   background #121212, text #e8e8e8, links #209cee, orange #e2885a,
+   light blue #a0c3e1, rules #444444. Dark mode uses it as is; light mode
+   keeps a white page with darker shades of the same accents for contrast. */
+:root {
+  --accent-orange: #c4683a;
+  --accent-blue: #3f7cb5;
+  --global-theme-color: #1a7fc4;
+  --global-hover-color: #c4683a;
+}
+
+html[data-theme="dark"] {
+  --accent-orange: #e2885a;
+  --accent-blue: #a0c3e1;
+  --global-bg-color: #121212;
+  --global-text-color: #e8e8e8;
+  --global-text-color-light: #a0a0a0;
+  --global-theme-color: #209cee;
+  --global-hover-color: #e2885a;
+  --global-divider-color: #444444;
+  --global-card-bg-color: #1c1c1c;
+  --global-footer-bg-color: #121212;
+  --global-footer-text-color: #a0a0a0;
+  --global-footer-link-color: #e2885a;
+}
+
+/* Name in the homepage heading: first name in the light-blue accent,
+   like the coloured keywords in the BioMo title. */
+.post-header .post-title .font-weight-bold {
+  color: var(--accent-blue);
+}
+
+/* Section headings get a thin rule underneath, as on the BioMo page. */
+.post article h2 {
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+/* The fixed footer sits on the page background, separated by a rule. */
+footer.fixed-bottom,
+footer.sticky-bottom {
+  border-top: 1px solid var(--global-divider-color);
 }
