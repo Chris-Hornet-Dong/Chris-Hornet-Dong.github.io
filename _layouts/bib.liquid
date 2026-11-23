@@ -29,29 +29,45 @@
         Local change: `preview_videos` is a comma-separated list of clips under
         assets/video/ that play one after another in the thumbnail slot, muted and
         looping back to the first. It takes precedence over `preview`.
+        Each clip gets its own stacked <video>; the next one is buffered while the
+        current one plays and is only revealed once it is actually playing, so the
+        switch has no black gap (swapping `src` on one element would blank it).
+        Sizes are inline so a stale cached stylesheet cannot break the layout.
       {% endcomment %}
       {% if entry.preview_videos %}
         {% assign clip_list = entry.preview_videos | split: ',' %}
-        {% capture clip_urls %}{% for clip in clip_list %}{{ clip | strip | prepend: '/assets/video/' | relative_url }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-        {% assign first_clip = clip_urls | split: ',' | first %}
-        <video
-          class="preview preview-playlist z-depth-1 rounded"
-          style="display: block; width: 100%; height: auto; aspect-ratio: 1760 / 1080; object-fit: cover;"
-          src="{{ first_clip }}"
-          data-clips="{{ clip_urls }}"
-          muted
-          autoplay
-          playsinline
-          preload="auto"
-        ></video>
+        <div
+          class="preview-playlist z-depth-1 rounded"
+          style="position: relative; display: block; width: 100%; aspect-ratio: 1760 / 1080; overflow: hidden;"
+        >
+          {% for clip in clip_list %}
+            <video
+              src="{{ clip | strip | prepend: '/assets/video/' | relative_url }}"
+              muted
+              playsinline
+              {% if forloop.first %}
+                autoplay
+              {% endif %}
+              preload="{% if forloop.index0 < 2 %}auto{% else %}none{% endif %}"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;{% unless forloop.first %} visibility: hidden;{% endunless %}"
+            ></video>
+          {% endfor %}
+        </div>
         <script>
-          (function (v) {
-            var clips = v.getAttribute('data-clips').split(','), i = 0;
-            v.muted = true;
-            v.addEventListener('ended', function () {
-              i = (i + 1) % clips.length;
-              v.src = clips[i];
-              v.play();
+          (function (box) {
+            var vids = box.querySelectorAll('video'), n = vids.length;
+            vids.forEach(function (v, k) {
+              v.muted = true;
+              v.addEventListener('playing', function () {
+                vids.forEach(function (o) { o.style.visibility = o === v ? 'visible' : 'hidden'; });
+                var after = vids[(k + 1) % n];
+                if (after !== v && after.preload !== 'auto') { after.preload = 'auto'; after.load(); }
+              });
+              v.addEventListener('ended', function () {
+                var next = vids[(k + 1) % n];
+                next.currentTime = 0;
+                next.play();
+              });
             });
           })(document.currentScript.previousElementSibling);
         </script>
