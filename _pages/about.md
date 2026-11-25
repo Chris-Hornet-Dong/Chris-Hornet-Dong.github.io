@@ -17,7 +17,7 @@ profile:
     </p>
 
 selected_papers: false # publications are included in the body below instead, to keep the section order
-social: true # includes social icons at the bottom of the page
+social: false # contact icons sit under the profile photo instead (profile.more_info)
 
 announcements:
   enabled: false # includes a list of news items

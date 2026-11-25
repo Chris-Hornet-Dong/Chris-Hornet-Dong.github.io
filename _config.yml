@@ -10,9 +10,7 @@ contact_note: >
   The best way to reach me is by email.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Yunao Dong - Computer Vision Researcher | HKUST & UT Austin | 3D Computer Vision & Human Motion Modeling
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+footer_text: # left empty: the footer shows only the copyright line
 keywords: Yunao Dong, computer vision, 3D vision, human motion, HKUST, UT Austin # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon-32x32.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
