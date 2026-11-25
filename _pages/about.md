@@ -9,8 +9,12 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>HKUST</p>
-    <p>Clear Water Bay, Hong Kong</p>
+    <p style="display: flex; justify-content: center; gap: 1rem; font-size: 1.6rem;">
+    <a href="mailto:ydongbd@connect.ust.hk" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/yunao-dong-1036a0356/" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/Chris-Hornet-Dong" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="https://scholar.google.com/citations?user=XEVXuOUAAAAJ" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+    </p>
 
 selected_papers: false # publications are included in the body below instead, to keep the section order
 social: true # includes social icons at the bottom of the page
