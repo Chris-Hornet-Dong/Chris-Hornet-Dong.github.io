@@ -45,15 +45,19 @@ html[data-theme="dark"] {
   --global-footer-link-color: #e2885a;
 }
 
-/* Navbar links and the top-right search / theme icons keep their colour on
-   hover instead of turning orange. Selectors mirror the theme's _navbar.scss. */
+/* Navbar links and the top-right search / theme icons turn blue (the theme
+   colour) on hover instead of orange. Selectors mirror the theme's _navbar.scss. */
 .navbar.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:hover,
 #search-toggle:hover,
 #light-toggle:hover {
-  color: var(--global-text-color);
-}
-.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:hover {
   color: var(--global-theme-color);
+}
+
+/* The first name is not bold, in the page heading or the navbar brand. */
+.post-header .post-title .font-weight-bold,
+.navbar-brand .font-weight-bold {
+  font-weight: inherit !important;
 }
 
 /* Section headings get a thin rule underneath, as on the BioMo page. */
