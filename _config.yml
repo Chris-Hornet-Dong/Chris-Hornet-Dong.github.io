@@ -303,6 +303,8 @@ defaults:
 
 sass:
   style: compressed
+  load_paths:
+    - assets/_sass # local partials (assets/_sass/_local.scss); also drives the main.css cache-bust hash
 
 # -----------------------------------------------------------------------------
 # Jekyll Minifier
