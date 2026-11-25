@@ -77,10 +77,15 @@ html[data-theme="dark"] {
   --global-footer-link-color: #e2885a;
 }
 
-/* Name in the homepage heading: first name in the light-blue accent,
-   like the coloured keywords in the BioMo title. */
-.post-header .post-title .font-weight-bold {
-  color: var(--accent-blue);
+/* Navbar links and the top-right search / theme icons keep their colour on
+   hover instead of turning orange. Selectors mirror the theme's _navbar.scss. */
+.navbar.navbar-light .navbar-nav .nav-item .nav-link:hover,
+#search-toggle:hover,
+#light-toggle:hover {
+  color: var(--global-text-color);
+}
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:hover {
+  color: var(--global-theme-color);
 }
 
 /* Section headings get a thin rule underneath, as on the BioMo page. */
