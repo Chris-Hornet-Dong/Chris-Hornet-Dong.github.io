@@ -52,19 +52,15 @@
 }
 
 /* Colour palette taken from the BioMo project page:
-   background #121212, text #e8e8e8, links #209cee, orange #e2885a,
-   light blue #a0c3e1, rules #444444. Dark mode uses it as is; light mode
+   background #121212, text #e8e8e8, links #209cee, orange #e2885a (link hover),
+   rules #444444. Dark mode uses it as is; light mode
    keeps a white page with darker shades of the same accents for contrast. */
 :root {
-  --accent-orange: #c4683a;
-  --accent-blue: #3f7cb5;
   --global-theme-color: #1a7fc4;
   --global-hover-color: #c4683a;
 }
 
 html[data-theme="dark"] {
-  --accent-orange: #e2885a;
-  --accent-blue: #a0c3e1;
   --global-bg-color: #121212;
   --global-text-color: #e8e8e8;
   --global-text-color-light: #a0a0a0;
