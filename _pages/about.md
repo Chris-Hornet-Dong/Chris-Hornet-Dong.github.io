@@ -92,7 +92,7 @@ My research interests lie primarily in 3D computer vision, with a particular foc
   <img src="{{ '/assets/img/logos/hkust.png' | relative_url }}" alt="HKUST logo">
   <div>
     <div class="cv-title">Hong Kong University of Science and Technology (HKUST)</div>
-    <div>Supervised by Professor Chi Keung "CK" Tang | Jan. 2026 - May. 2026</div>
+    <div>Supervised by Professor Chi Keung Tang | Jan. 2026 - May. 2026</div>
   </div>
 </div>
 
@@ -100,7 +100,7 @@ My research interests lie primarily in 3D computer vision, with a particular foc
   <img src="{{ '/assets/img/logos/ut.png' | relative_url }}" alt="UT Austin logo">
   <div>
     <div class="cv-title">University of Texas at Austin (UT Austin)</div>
-    <div>Supervised by Professor Georgios Pavlakos | Nov. 2025 - Now</div>
+    <div>Supervised by Professor Georgios Pavlakos | Jun. 2026 - Nov. 2026</div>
   </div>
 </div>
 

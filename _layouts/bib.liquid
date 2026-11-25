@@ -110,23 +110,7 @@
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    {% comment %}
-      Local change (rest of this file is al_folio_core 1.0.15's _layouts/bib.liquid):
-      the title links to the project page (`website`) if there is one, otherwise to the
-      arXiv page, otherwise to an absolute `html` URL.
-    {% endcomment %}
-    {% if entry.website %}
-      {% assign title_url = entry.website %}
-    {% elsif entry.arxiv %}
-      {% capture title_url %}https://arxiv.org/abs/{{ entry.arxiv }}{% endcapture %}
-    {% elsif entry.html contains '://' %}
-      {% assign title_url = entry.html %}
-    {% else %}
-      {% assign title_url = nil %}
-    {% endif %}
-    <div class="title">
-      {%- if title_url -%}<a href="{{ title_url }}">{{ entry.title }}</a>{%- else -%}{{ entry.title }}{%- endif -%}
-    </div>
+    <div class="title">{{ entry.title }}</div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
