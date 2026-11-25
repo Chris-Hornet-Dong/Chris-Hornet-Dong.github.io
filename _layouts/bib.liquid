@@ -318,7 +318,11 @@
         {% endif %}
       {% endif %}
       {% if entry.website %}
-        <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
+        {% comment %}
+          Local change: always open in a new tab. jekyll-link-attributes only does that
+          for other domains, so project pages on this site (e.g. /BioMo/) opened in place.
+        {% endcomment %}
+        <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">Website</a>
       {% endif %}
     </div>
     {% if site.enable_publication_badges %}
