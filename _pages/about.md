@@ -14,6 +14,7 @@ profile:
     <a href="https://www.linkedin.com/in/yunao-dong-1036a0356/" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
     <a href="https://github.com/Chris-Hornet-Dong" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
     <a href="https://scholar.google.com/citations?user=XEVXuOUAAAAJ" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+    <a href="https://x.com/Chrisie_DYA" title="X" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
     </p>
 
 selected_papers: false # publications are included in the body below instead, to keep the section order
