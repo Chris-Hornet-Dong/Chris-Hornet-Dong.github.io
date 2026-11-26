@@ -23,26 +23,71 @@
   }
 }
 
-/* Colour palette taken from the BioMo project page:
-   background #121212, text #e8e8e8, links #209cee, orange #e2885a (link hover),
-   rules #444444. Dark mode uses it as is; light mode
-   keeps a white page with darker shades of the same accents for contrast. */
-:root {
-  --global-theme-color: #1a7fc4;
-  --global-hover-color: #c4683a;
-}
-
+/* Colour palette: always dark, with two accents as on the BioMo project page.
+   Light blue is the main accent (links, active nav, dates, badges); light
+   orange is the second accent (Chinese name, section-heading dots).
+   The light/dark toggle is off (enable_darkmode: false in _config.yml), so the
+   theme's :root (light) variables are what apply; they are overridden here, and
+   the data-theme selectors are included in case the toggle is ever re-enabled. */
+:root,
+html[data-theme="light"],
 html[data-theme="dark"] {
+  --accent-blue: #a0c3e1;
+  --accent-blue-soft: rgba(160, 195, 225, 0.4);
+  --accent-orange: #e2885a;
   --global-bg-color: #121212;
+  --global-code-bg-color: #2c3237;
   --global-text-color: #e8e8e8;
   --global-text-color-light: #a0a0a0;
-  --global-theme-color: #209cee;
-  --global-hover-color: #e2885a;
-  --global-divider-color: #444444;
-  --global-card-bg-color: #1c1c1c;
+  --global-theme-color: var(--accent-blue);
+  --global-hover-color: var(--accent-blue);
+  --global-hover-text-color: #121212;
   --global-footer-bg-color: #121212;
   --global-footer-text-color: #a0a0a0;
-  --global-footer-link-color: #e2885a;
+  --global-footer-link-color: var(--accent-blue);
+  --global-distill-app-color: #a0a0a0;
+  --global-divider-color: #3a3a3a;
+  --global-card-bg-color: #1c1c1c;
+  --global-highlight-color: var(--accent-orange);
+  --global-back-to-top-bg-color: rgba(232, 232, 232, 0.4);
+  --global-back-to-top-text-color: #121212;
+  --global-newsletter-bg-color: #1c1c1c;
+  --global-newsletter-text-color: #e8e8e8;
+  color-scheme: dark;
+}
+
+/* Body-text links: light blue with a faint underline that firms up on hover. */
+.post article p > a:not(.btn) {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-blue-soft);
+  text-underline-offset: 3px;
+}
+.post article p > a:not(.btn):hover {
+  text-decoration-color: var(--accent-blue);
+}
+.post article .profile p > a {
+  text-decoration: none;
+}
+
+/* Second accent: the Chinese name in the subtitle, and a dot before each
+   section heading (publication year headings excluded). */
+.name-zh {
+  color: var(--accent-orange);
+}
+.post article h2:not(.bibliography)::before {
+  content: "";
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  margin-right: 0.5em;
+  border-radius: 50%;
+  background-color: var(--accent-orange);
+  vertical-align: 0.15em;
+}
+
+/* Venue badges are light blue, so their linked text must be dark, not white. */
+.publications .abbr abbr a {
+  color: var(--global-card-bg-color);
 }
 
 /* Navbar links and the top-right search / theme icons turn blue (the theme

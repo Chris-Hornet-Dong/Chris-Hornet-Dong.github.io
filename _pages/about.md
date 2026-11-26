@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: 董昀翱 · Undergraduate student in Computer Science at <a href='https://hkust.edu.hk/'>HKUST</a>
+subtitle: <span class='name-zh'>董昀翱</span> · Undergraduate student in Computer Science at <a href='https://hkust.edu.hk/'>HKUST</a>
 
 profile:
   align: right
@@ -57,7 +57,7 @@ latest_posts:
   .award .award-year {
     flex-shrink: 0;
     white-space: nowrap;
-    color: var(--global-text-color-light);
+    color: var(--global-theme-color);
     font-size: 0.9em;
   }
 </style>
