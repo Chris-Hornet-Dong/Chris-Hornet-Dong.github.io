@@ -69,9 +69,16 @@ html[data-theme="dark"] {
   text-decoration: none;
 }
 
-/* Second accent: the Chinese name in the subtitle, and a dot before each
-   section heading (publication year headings excluded). */
+/* Second accent (light orange): the Chinese name in the subtitle, the large
+   headings, and a dot before each section heading (year headings excluded). */
 .name-zh {
+  color: var(--accent-orange);
+}
+
+/* Large headings in light orange: the page title (the name on the homepage)
+   and the section headings (Education, Research Experience, ...). */
+.post-header .post-title,
+.post article h2:not(.bibliography) {
   color: var(--accent-orange);
 }
 .post article h2:not(.bibliography)::before {
