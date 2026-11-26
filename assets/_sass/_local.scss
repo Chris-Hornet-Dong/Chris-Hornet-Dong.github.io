@@ -69,27 +69,12 @@ html[data-theme="dark"] {
   text-decoration: none;
 }
 
-/* Second accent (light orange): the Chinese name in the subtitle, the large
-   headings, and a dot before each section heading (year headings excluded). */
-.name-zh {
-  color: var(--accent-orange);
-}
-
-/* Large headings in light orange: the page title (the name on the homepage)
-   and the section headings (Education, Research Experience, ...). */
-.post-header .post-title,
+/* Second accent (light orange): the Chinese name in the subtitle and the
+   section headings (Education, Research Experience, ...; publication year
+   headings excluded). The page title (the name) stays white. */
+.name-zh,
 .post article h2:not(.bibliography) {
   color: var(--accent-orange);
-}
-.post article h2:not(.bibliography)::before {
-  content: "";
-  display: inline-block;
-  width: 0.4em;
-  height: 0.4em;
-  margin-right: 0.5em;
-  border-radius: 50%;
-  background-color: var(--accent-orange);
-  vertical-align: 0.15em;
 }
 
 /* Venue badges are light blue, so their linked text must be dark, not white. */
