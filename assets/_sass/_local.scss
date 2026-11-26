@@ -34,7 +34,7 @@ html[data-theme="light"],
 html[data-theme="dark"] {
   --accent-blue: #a0c3e1;
   --accent-blue-soft: rgba(160, 195, 225, 0.4);
-  --accent-orange: #e2885a;
+  --accent-orange: #f0b48c; /* a lighter take on the BioMo orange #e2885a */
   --global-bg-color: #121212;
   --global-code-bg-color: #2c3237;
   --global-text-color: #e8e8e8;
@@ -69,9 +69,11 @@ html[data-theme="dark"] {
   text-decoration: none;
 }
 
-/* Second accent (light orange): the Chinese name in the subtitle.
-   The page title and section headings stay in the plain text colour. */
-.name-zh {
+/* Second accent (light orange): the Chinese name in the subtitle and the
+   section headings (Education, Research Experience, ...; publication year
+   headings excluded). The page title (the name) stays white. */
+.name-zh,
+.post article h2:not(.bibliography) {
   color: var(--accent-orange);
 }
 
