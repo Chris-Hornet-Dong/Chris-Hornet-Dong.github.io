@@ -87,7 +87,7 @@ html[data-theme="dark"] {
 
 /* Venue badges are light blue, so their linked text must be dark, not white. */
 .publications .abbr abbr a {
-  color: var(--global-card-bg-color);
+  color: var(--global-card-bg-color) !important;
 }
 
 /* Navbar links and the top-right search / theme icons turn blue (the theme
