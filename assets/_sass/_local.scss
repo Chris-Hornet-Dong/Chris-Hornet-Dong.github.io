@@ -69,11 +69,9 @@ html[data-theme="dark"] {
   text-decoration: none;
 }
 
-/* Second accent (light orange): the Chinese name in the subtitle and the
-   section headings (Education, Research Experience, ...; publication year
-   headings excluded). The page title (the name) stays white. */
-.name-zh,
-.post article h2:not(.bibliography) {
+/* Second accent (light orange): the Chinese name in the subtitle.
+   The page title and section headings stay in the plain text colour. */
+.name-zh {
   color: var(--accent-orange);
 }
 
